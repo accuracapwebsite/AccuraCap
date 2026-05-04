@@ -38,7 +38,7 @@ export default async function ProductsPage() {
         <div className="max-w-[1280px] mx-auto">
 
           <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
-            Our <span className="text-accent">PMS</span> <span className="italic font-bold">Strategies</span>
+            Our <span className="text-accent">PMS</span> <span className="italic">Strategies</span>
           </h1>
           <div className="mt-4 h-[2px] w-10 bg-accent" />
 
@@ -77,7 +77,7 @@ export default async function ProductsPage() {
         <div className="max-w-[1280px] mx-auto">
 
           <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
-            Our <span className="text-accent">AIF</span> <span className="italic font-bold">Strategies</span>
+            Our <span className="text-accent">AIF</span> <span className="italic">Strategies</span>
           </h1>
           <div className="mt-4 h-[2px] w-10 bg-accent" />
 

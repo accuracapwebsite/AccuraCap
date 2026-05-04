@@ -6,7 +6,7 @@ export default function KYCPage() {
       <div className="max-w-[1280px] mx-auto">
 
         <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
-          KYC Status <span className="italic font-bold text-accent">Check</span>
+          KYC Status <span className="italic text-accent">Check</span>
         </h1>
         <div className="mt-4 h-[2px] w-10 bg-accent" />
 

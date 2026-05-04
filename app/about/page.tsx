@@ -12,7 +12,7 @@ export default function About() {
         </div>
 
         <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
-          About <span className="italic font-bold text-accent">AccuraCap</span>
+          About <span className="italic text-accent">AccuraCap</span>
         </h1>
         <div className="mt-4 h-[2px] w-10 bg-accent" />
 

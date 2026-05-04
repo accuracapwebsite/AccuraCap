@@ -78,7 +78,7 @@ export default async function PeoplePage() {
         <div className="max-w-[1280px] mx-auto">
 
           <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
-            Meet Our <span className="italic font-bold text-accent">Team</span>
+            Meet Our <span className="italic text-accent">Team</span>
           </h1>
           <div className="mt-4 h-[2px] w-10 bg-accent" />
 

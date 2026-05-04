@@ -58,7 +58,7 @@ export default async function Hero() {
           AccuraCap is a SEBI-registered Portfolio Management Service and
           Category III Alternative Investment Fund manager. We manage long-only
           equity portfolios through proprietary quantitative, AI-driven algorithms that have
-          consistently outperformed benchmark returns across multiple periods.
+           outperformed benchmark returns across multiple periods.
         </p>
 
         {/* CTA */}
@@ -79,7 +79,7 @@ export default async function Hero() {
 
         {/* Stats strip — driven entirely by Sanity CMS */}
         {stats.length > 0 && (
-          <div className="mt-5 md:mt-8 lg:mt-10 relative rounded-md bg-[#d8d8d8]/70 backdrop-blur-md ring-1 ring-[#1a1a1a]/10 shadow-[0_6px_20px_-12px_rgba(0,0,0,0.15)] px-3 md:px-5 pt-4 md:pt-6 pb-3 md:pb-4">
+          <div className="mt-5 md:mt-8 lg:mt-10 relative px-3 md:px-5 pt-4 md:pt-6 pb-3 md:pb-4">
             <div className="grid grid-cols-3 w-full">
               {stats.map((stat, index) => (
                 <div

@@ -91,7 +91,7 @@ export default async function InvestmentSolutions() {
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6 md:mb-8">
             <h2 className="text-[30px] sm:text-[35px] md:text-[42px] lg:text-[46.5px] text-black leading-[1.18] tracking-tight">
-              Portfolio Management <span className="italic font-bold text-accent">Services</span>
+              Portfolio Management <span className="italic text-accent">Services</span>
             </h2>
           </div>
 
@@ -124,7 +124,7 @@ export default async function InvestmentSolutions() {
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6 md:mb-8">
             <h2 className="text-[30px] sm:text-[35px] md:text-[42px] lg:text-[46.5px] text-black leading-[1.18] tracking-tight">
-              Alternative Investment <span className="italic font-bold text-accent">Funds</span>
+              Alternative Investment <span className="italic text-accent">Funds</span>
             </h2>
           </div>
 

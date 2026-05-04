@@ -36,7 +36,7 @@ const reasons: Reason[] = [
   {
     title: "Skin in the Game",
     description:
-      "Started as a family office, with proprietary capital invested in the samemodels that power client portfolios.",
+      "Started as a family office, with proprietary capital invested in the same models that power client portfolios.",
   },
 ];
 
