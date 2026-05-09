@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 type FieldKey = "name" | "email" | "phone" | "subject";
 type Status = "idle" | "submitting" | "success" | "error";
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 const fields: { key: FieldKey; label: string; type: string; placeholder: string; autoComplete: string }[] = [
   { key: "name", label: "Name", type: "text", placeholder: "Name", autoComplete: "name" },
@@ -18,6 +21,8 @@ export default function ContactForm() {
   const [values, setValues] = useState(initialValues);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const update = (key: keyof typeof initialValues) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setValues((v) => ({ ...v, [key]: e.target.value }));
@@ -27,6 +32,12 @@ export default function ContactForm() {
     e.preventDefault();
     if (status === "submitting") return;
 
+    if (!captchaToken) {
+      setStatus("error");
+      setErrorMsg("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
     setStatus("submitting");
     setErrorMsg("");
 
@@ -34,21 +45,27 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, recaptchaToken: captchaToken }),
       });
       const data = await res.json();
 
       if (!res.ok || !data.ok) {
         setStatus("error");
         setErrorMsg(data.error || "Could not send your message. Please try again.");
+        recaptchaRef.current?.reset();
+        setCaptchaToken(null);
         return;
       }
 
       setStatus("success");
       setValues(initialValues);
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
     } catch {
       setStatus("error");
       setErrorMsg("Network error. Please check your connection and try again.");
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 
@@ -108,9 +125,19 @@ export default function ContactForm() {
         />
       </div>
 
+      {RECAPTCHA_SITE_KEY && (
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={(token) => setCaptchaToken(token)}
+          onExpired={() => setCaptchaToken(null)}
+          onErrored={() => setCaptchaToken(null)}
+        />
+      )}
+
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !captchaToken}
         className="w-full bg-black text-white py-3 text-[14px] tracking-[0.14em] uppercase font-medium hover:bg-black/85 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending…" : "Send Message"}

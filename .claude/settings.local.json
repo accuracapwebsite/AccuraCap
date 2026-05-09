@@ -3,7 +3,9 @@
     "allow": [
       "Bash(xargs ls:*)",
       "Bash(npm run:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git *)",
+      "Bash(npx tsc *)"
     ]
   }
 }

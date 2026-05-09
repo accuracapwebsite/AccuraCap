@@ -64,7 +64,7 @@ export default function PhilosophyPage() {
               {/* Image below text */}
               <div className="group relative mt-7 w-full flex-1 min-h-[300px] overflow-hidden rounded-2xl cursor-pointer shadow-[0_1px_2px_rgba(17,24,39,0.04),0_16px_40px_-20px_rgba(17,24,39,0.22)]">
                 <Image
-                  src="/Philosophy page.png"
+                  src="/Disciplined investing photo.png"
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 56vw, 100vw"
@@ -167,7 +167,7 @@ underperformers with minimal manual intervention.
             <div className="lg:col-span-2">
               <div className="group relative w-full aspect-[16/10] md:aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-[0_1px_2px_rgba(17,24,39,0.04),0_16px_40px_-20px_rgba(17,24,39,0.22)]">
                 <Image
-                  src="/p1.jpg"
+                  src="/Philosophy page.png"
                   alt=""
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"

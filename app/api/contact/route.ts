@@ -12,7 +12,35 @@ type Body = {
   subject?: string;
   message?: string;
   company?: string;
+  recaptchaToken?: string;
 };
+
+async function verifyRecaptcha(token: string, remoteIp?: string | null): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) {
+    console.error("RECAPTCHA_SECRET_KEY is not configured.");
+    return false;
+  }
+
+  const params = new URLSearchParams({ secret, response: token });
+  if (remoteIp) params.append("remoteip", remoteIp);
+
+  try {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString(),
+    });
+    const data = (await res.json()) as { success?: boolean; "error-codes"?: string[] };
+    if (!data.success) {
+      console.warn("reCAPTCHA verification failed:", data["error-codes"]);
+    }
+    return Boolean(data.success);
+  } catch (err) {
+    console.error("reCAPTCHA verification request error:", err);
+    return false;
+  }
+}
 
 export async function POST(request: Request) {
   let body: Body;
@@ -25,6 +53,25 @@ export async function POST(request: Request) {
   // Honeypot — bots tend to fill every field. Pretend success silently.
   if (body.company && body.company.trim().length > 0) {
     return Response.json({ ok: true });
+  }
+
+  const recaptchaToken = body.recaptchaToken?.trim() ?? "";
+  if (!recaptchaToken) {
+    return Response.json(
+      { ok: false, error: "Please complete the reCAPTCHA verification." },
+      { status: 400 }
+    );
+  }
+
+  const remoteIp =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip");
+  const recaptchaOk = await verifyRecaptcha(recaptchaToken, remoteIp);
+  if (!recaptchaOk) {
+    return Response.json(
+      { ok: false, error: "reCAPTCHA verification failed. Please try again." },
+      { status: 400 }
+    );
   }
 
   const name = body.name?.trim() ?? "";
