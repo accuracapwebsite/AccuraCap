@@ -12,21 +12,21 @@ type Reason =
 
 const reasons: Reason[] = [
   {
-    title: "Top Performing Fund",
+    title: "Strong Historical Performance",
     points: [
-      "Top 10 Performing PMS in 10Y, 5Y and 3Y returns (PMSBazaar, Altport Experts, PMS AIF world).",
-      "#1 Risk Adjusted PMS for 10 years (2021 and 2022, by PMS AIF world)",
+      "Ranked among the top-performing PMS strategies across select 3Y, 5Y, and 10Y periods by independent industry platforms (PMS Bazaar , Altport Experts, PMS AIF World)",
+      // "#1 Risk Adjusted PMS for 10 years (2021 and 2022, by PMS AIF world)",
     ],
   },
   {
     title: "Proven, Time-Tested Technology",
     description:
-      "Investment models are rigorously back-tested over 10+ years on proprietary funds.",
+      "Investment models are rigorously back-tested over 25+ years on proprietary funds.",
   },
   {
     title: "Rules-Based",
     description:
-      "Decisions made independent of individual biases, based on systemic rules.",
+      "Decisions made independent of individual biases, based on systematic rules.",
   },
   {
     title: "Always Invested",

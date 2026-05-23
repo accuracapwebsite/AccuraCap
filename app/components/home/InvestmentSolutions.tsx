@@ -56,9 +56,6 @@ export default async function InvestmentSolutions() {
       <p className="mt-5 text-[30px] md:text-[35px] text-black tracking-tight">
         {p.returns}
       </p>
-      <p className="mt-1 text-muted text-[13px]">
-        *Absolute Returns
-      </p>
 
       {/* Divider */}
       <div className="my-5 h-px w-full bg-border" />

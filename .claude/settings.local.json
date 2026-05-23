@@ -5,7 +5,12 @@
       "Bash(npm run:*)",
       "Bash(npm install:*)",
       "Bash(git *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/studio\" -UseBasicParsing -TimeoutSec 20; \"STUDIO STATUS: $\\($r.StatusCode\\)\"; \"LENGTH: $\\($r.Content.Length\\)\" } catch { \"STUDIO ERROR: $\\($_.Exception.Message\\)\"; if \\($_.Exception.Response\\) { \"HTTP STATUS: $\\([int]$_.Exception.Response.StatusCode\\)\" } })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/\" -UseBasicParsing -TimeoutSec 20; \"HOME STATUS: $\\($r.StatusCode\\)\" } catch { \"HOME ERROR: $\\($_.Exception.Message\\)\"; if \\($_.Exception.Response\\) { \"HTTP STATUS: $\\([int]$_.Exception.Response.StatusCode\\)\" } })",
+      "Read(//m/work/EnableUser/accuracap/**)",
+      "PowerShell(try { $h=Invoke-WebRequest -Uri \"http://localhost:3000/\" -UseBasicParsing -TimeoutSec 60; \"HOME STATUS: $\\($h.StatusCode\\)\"; $count=\\([regex]::Matches\\($h.Content,'Absolute Returns'\\)\\).Count; \"ABSOLUTE-RETURNS OCCURRENCES ON HOME: $count\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })"
     ]
   }
 }
