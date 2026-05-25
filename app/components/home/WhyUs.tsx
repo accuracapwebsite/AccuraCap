@@ -14,7 +14,7 @@ const reasons: Reason[] = [
   {
     title: "Strong Historical Performance",
     points: [
-      "Ranked among the top-performing PMS strategies across select 3Y, 5Y, and 10Y periods by independent industry platforms (PMS Bazaar , Altport Experts, PMS AIF World)",
+      "Ranked among the top-performing PMS strategies across select 3Y, 5Y, and 10Y periods.",
       // "#1 Risk Adjusted PMS for 10 years (2021 and 2022, by PMS AIF world)",
     ],
   },
@@ -50,7 +50,7 @@ export default function WhyUs() {
         </h2>
 
         {/* Cards */}
-        <div className="mt-5 md:mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="mt-5 md:mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-5 md:gap-6">
           {reasons.map((item, i) => (
             <article
               key={i}
