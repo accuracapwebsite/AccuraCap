@@ -10,7 +10,15 @@
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/studio\" -UseBasicParsing -TimeoutSec 20; \"STUDIO STATUS: $\\($r.StatusCode\\)\"; \"LENGTH: $\\($r.Content.Length\\)\" } catch { \"STUDIO ERROR: $\\($_.Exception.Message\\)\"; if \\($_.Exception.Response\\) { \"HTTP STATUS: $\\([int]$_.Exception.Response.StatusCode\\)\" } })",
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/\" -UseBasicParsing -TimeoutSec 20; \"HOME STATUS: $\\($r.StatusCode\\)\" } catch { \"HOME ERROR: $\\($_.Exception.Message\\)\"; if \\($_.Exception.Response\\) { \"HTTP STATUS: $\\([int]$_.Exception.Response.StatusCode\\)\" } })",
       "Read(//m/work/EnableUser/accuracap/**)",
-      "PowerShell(try { $h=Invoke-WebRequest -Uri \"http://localhost:3000/\" -UseBasicParsing -TimeoutSec 60; \"HOME STATUS: $\\($h.StatusCode\\)\"; $count=\\([regex]::Matches\\($h.Content,'Absolute Returns'\\)\\).Count; \"ABSOLUTE-RETURNS OCCURRENCES ON HOME: $count\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })"
+      "PowerShell(try { $h=Invoke-WebRequest -Uri \"http://localhost:3000/\" -UseBasicParsing -TimeoutSec 60; \"HOME STATUS: $\\($h.StatusCode\\)\"; $count=\\([regex]::Matches\\($h.Content,'Absolute Returns'\\)\\).Count; \"ABSOLUTE-RETURNS OCCURRENCES ON HOME: $count\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "Bash(awk -F',' 'NR>1 {print $1}' \"exported_reports_site-scanner_Build#1_29+May+'\\\\''26_Exported_29-05-2026_23762.csv\")",
+      "Bash(cp \"exported_reports_site-scanner_Build#1_29+May+'26_Exported_29-05-2026_23762.csv\" report.csv)",
+      "Bash(awk -F',' 'NR>1 {print $1}' report.csv)",
+      "Bash(awk -F',' 'NR>1 {print $1\"|\"$7}' report.csv)",
+      "Bash(awk -F',' '{print $7, \"|\", $9}')",
+      "Bash(awk -F',' '{print $7}')",
+      "Bash(awk -F',' '$7~/people/{print $9}')",
+      "Bash(echo \"Exit code: $?\")"
     ]
   }
 }

@@ -71,10 +71,10 @@ export default function Navbar() {
       <div className="max-w-[1600px] mx-auto flex items-center px-5 md:px-8 lg:px-12 py-3 lg:py-3.5">
 
         {/* Logo */}
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="shrink-0" aria-label="AccuraCap home">
           <Image
             src="/Accuracap-logo.png"
-            alt="Logo"
+            alt="AccuraCap company logo"
             width={220}
             height={116}
             priority

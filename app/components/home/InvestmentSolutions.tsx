@@ -48,7 +48,7 @@ export default async function InvestmentSolutions() {
       </h3>
 
       {/* Category tag */}
-      <span className="text-muted text-[12.5px] tracking-[0.2em] uppercase font-medium pt-1">
+      <span className="text-black/65 text-[12.5px] tracking-[0.2em] uppercase font-medium pt-1">
         {p.category}
       </span>
 
@@ -63,17 +63,17 @@ export default async function InvestmentSolutions() {
       {/* Details */}
       <div className="flex flex-col gap-3.5 text-[15px]">
         <div>
-          <p className="text-muted/60 text-[12.5px] uppercase tracking-[0.14em] mb-1">Market Cap</p>
+          <p className="text-black/65 text-[12.5px] uppercase tracking-[0.14em] mb-1">Market Cap</p>
           <p className="text-black/75">{p.marketCap}</p>
         </div>
         {p.stocks && (
           <div>
-            <p className="text-muted/60 text-[12.5px] uppercase tracking-[0.14em] mb-1">Stocks</p>
+            <p className="text-black/65 text-[12.5px] uppercase tracking-[0.14em] mb-1">Stocks</p>
             <p className="text-black/75">{p.stocks}</p>
           </div>
         )}
         <div>
-          <p className="text-muted/60 text-[12.5px] uppercase tracking-[0.14em] mb-1">Benchmark</p>
+          <p className="text-black/65 text-[12.5px] uppercase tracking-[0.14em] mb-1">Benchmark</p>
           <p className="text-black/75">{p.benchmark}</p>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default async function InvestmentSolutions() {
           {/* Disclaimer + CTA */}
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-5 md:mt-7 gap-5">
             {pmsDisclaimer?.text && (
-              <p className="text-[13.5px] text-muted">
+              <p className="text-[13.5px] text-black/65">
                 {pmsDisclaimer.text}
               </p>
             )}
@@ -131,7 +131,7 @@ export default async function InvestmentSolutions() {
           </div>
 
           {aifDisclaimer?.text && (
-            <p className="mt-5 md:mt-7 text-[13.5px] text-muted">
+            <p className="mt-5 md:mt-7 text-[13.5px] text-black/65">
               {aifDisclaimer.text}
             </p>
           )}

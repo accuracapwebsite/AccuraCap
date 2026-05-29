@@ -136,7 +136,7 @@ minimum investment requirement for AIF is Rs. 1 crore/each.
           <li>Trust</li>
           <li>Partnership firms or any other eligible investor</li>
         </ul>
-        <p className="text-xs text-muted/60">*For PMS, we accept Non-Resident Indian (NRI) except USA and Canada residents.</p>
+        <p className="text-xs text-black/65">*For PMS, we accept Non-Resident Indian (NRI) except USA and Canada residents.</p>
       </div>
     ),
   },

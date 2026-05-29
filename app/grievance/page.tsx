@@ -123,7 +123,7 @@ export default function GrievancePage() {
               <a
                 href="http://scores.gov.in/"
                 target="_blank"
-                className="text-accent hover:text-accent-dark transition-colors"
+                className="text-accent underline hover:text-accent-dark transition-colors"
               >
                 http://scores.gov.in/
               </a>{" "}

@@ -31,7 +31,7 @@ function MemberCard({ member }: { member: Member }) {
         {member.image ? (
           <Image
             src={urlFor(member.image).width(320).height(320).url()}
-            alt={member.name}
+            alt={`Portrait photo of ${member.name}${member.role ? `, ${member.role}` : ""}`}
             fill
             sizes="128px"
             className="object-cover object-top"
@@ -51,7 +51,7 @@ function MemberCard({ member }: { member: Member }) {
           {member.name}
         </h2>
         {member.role && (
-          <p className="mt-1 text-[14px] md:text-[15px] text-black/55 font-medium tracking-wide break-words">
+          <p className="mt-1 text-[14px] md:text-[15px] text-black/65 font-medium tracking-wide break-words">
             {member.role}
           </p>
         )}

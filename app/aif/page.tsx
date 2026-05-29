@@ -30,7 +30,7 @@ export default async function AIFPage() {
             { label: "Sponsor", value: "Accuracap Consultancy Services Pvt Ltd" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="text-muted/60 text-[13px] uppercase tracking-[0.18em] mb-1.5">{item.label}</p>
+              <p className="text-black/65 text-[13px] uppercase tracking-[0.18em] mb-1.5">{item.label}</p>
               <p className="text-[16px] md:text-[17.5px] text-black">{item.value}</p>
             </div>
           ))}
@@ -49,7 +49,7 @@ export default async function AIFPage() {
                   <div className="px-5 md:px-6 py-3.5 bg-surface border-b border-border">
                     <h3 className="text-[16px] md:text-[17.5px] font-semibold text-black">{doc.title}</h3>
                   </div>
-                  <iframe src={doc.fileUrl} className="w-full h-[280px] md:h-[340px]" />
+                  <iframe src={doc.fileUrl} title={doc.title} className="w-full h-[280px] md:h-[340px]" />
                 </div>
               ))}
             </div>

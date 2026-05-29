@@ -57,7 +57,7 @@ export default async function ProductsPage() {
                 <div className="px-6 md:px-8 py-6 md:py-7 grid sm:grid-cols-2 gap-x-10 gap-y-6">
                   {product.fields.map((f, i) => (
                     <div key={`${product._id}-${i}`} className={f.fullWidth ? "sm:col-span-2" : ""}>
-                      <p className="text-black/50 text-[13px] uppercase tracking-[0.18em] mb-1.5 font-medium">
+                      <p className="text-black/65 text-[13px] uppercase tracking-[0.18em] mb-1.5 font-medium">
                         {f.label}
                       </p>
                       <p className="text-[16px] md:text-[17.5px] text-black/75 leading-[1.7] whitespace-pre-line">
@@ -96,7 +96,7 @@ export default async function ProductsPage() {
                 <div className="px-6 md:px-8 py-6 md:py-7 grid sm:grid-cols-2 gap-x-10 gap-y-6">
                   {product.fields.map((f, i) => (
                     <div key={`${product._id}-${i}`} className={f.fullWidth ? "sm:col-span-2" : ""}>
-                      <p className="text-black/50 text-[13px] uppercase tracking-[0.18em] mb-1.5 font-medium">
+                      <p className="text-black/65 text-[13px] uppercase tracking-[0.18em] mb-1.5 font-medium">
                         {f.label}
                       </p>
                       <p className="text-[16px] md:text-[17.5px] text-black/75 leading-[1.7] whitespace-pre-line">
@@ -110,7 +110,7 @@ export default async function ProductsPage() {
           </div>
 
           {aifDisclaimer?.text && (
-            <p className="mt-6 md:mt-8 text-[13.5px] md:text-[14px] text-muted leading-[1.7] whitespace-pre-line">
+            <p className="mt-6 md:mt-8 text-[13.5px] md:text-[14px] text-black/65 leading-[1.7] whitespace-pre-line">
               {aifDisclaimer.text}
             </p>
           )}

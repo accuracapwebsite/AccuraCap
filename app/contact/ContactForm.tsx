@@ -88,7 +88,7 @@ export default function ContactForm() {
             onChange={update(field.key)}
             disabled={isSubmitting}
             required
-            className="w-full mt-1.5 px-4 py-2.5 bg-surface border border-black/10 text-[15.5px] text-black placeholder:text-black/40 focus:outline-none focus:border-black transition-colors disabled:opacity-60"
+            className="w-full mt-1.5 px-4 py-2.5 bg-surface border border-black/55 text-[15.5px] text-black placeholder:text-black/65 focus:outline-none focus:border-black transition-colors disabled:opacity-60"
           />
         </div>
       ))}
@@ -107,7 +107,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           required
           maxLength={5000}
-          className="w-full mt-1.5 px-4 py-2.5 bg-surface border border-black/10 text-[15.5px] text-black placeholder:text-black/40 focus:outline-none focus:border-black transition-colors disabled:opacity-60"
+          className="w-full mt-1.5 px-4 py-2.5 bg-surface border border-black/55 text-[15.5px] text-black placeholder:text-black/65 focus:outline-none focus:border-black transition-colors disabled:opacity-60"
         />
       </div>
 

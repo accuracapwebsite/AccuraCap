@@ -77,16 +77,22 @@ export default function WhyUs() {
 
                 {/* Body */}
                 {"points" in item ? (
-                  <ul className="mt-4 space-y-3">
-                    {item.points.map((point, j) => (
-                      <li
-                        key={j}
-                        className="text-[15.5px] md:text-[16px] text-black/65 leading-[1.65]"
-                      >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  item.points.length > 1 ? (
+                    <ul className="mt-4 space-y-3">
+                      {item.points.map((point, j) => (
+                        <li
+                          key={j}
+                          className="text-[15.5px] md:text-[16px] text-black/65 leading-[1.65]"
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-4 text-[15.5px] md:text-[16px] text-black/65 leading-[1.65]">
+                      {item.points[0]}
+                    </p>
+                  )
                 ) : (
                   <p className="mt-4 text-[15.5px] md:text-[16px] text-black/65 leading-[1.65]">
                     {item.description}

@@ -40,7 +40,7 @@ export default async function ContactPage() {
           <div className="space-y-6">
 
             <div>
-              <p className="text-black/50 text-[13px] uppercase tracking-[0.18em] mb-2">Corporate Office</p>
+              <p className="text-black/65 text-[13px] uppercase tracking-[0.18em] mb-2">Corporate Office</p>
               <p className="text-black/75 text-[16px] md:text-[17.5px] leading-[1.7]">
                 Office Number 919, 9th Floor,
                 <br />
@@ -54,10 +54,10 @@ export default async function ContactPage() {
 
             {registeredOffice && (
               <div>
-                <p className="text-black/50 text-[13px] uppercase tracking-[0.18em] mb-2">
+                <p className="text-black/65 text-[13px] uppercase tracking-[0.18em] mb-2">
                   {registeredOffice.heading}
                 </p>
-                <p className="text-black/75 text-[16px] md:text-[17.5px] leading-[1.7]">
+                <p lang="en" className="text-black/75 text-[16px] md:text-[17.5px] leading-[1.7]">
                   {registeredOffice.addressLine1}
                   {registeredOffice.addressLine2 && (
                     <>
@@ -83,6 +83,7 @@ export default async function ContactPage() {
             src="https://www.google.com/maps?q=Wave%20Silver%20Tower%20Noida&output=embed"
             className="w-full h-[300px] md:h-[380px]"
             loading="lazy"
+            title="Map showing AccuraCap corporate office at Wave Silver Tower, Noida"
           ></iframe>
         </div>
 
