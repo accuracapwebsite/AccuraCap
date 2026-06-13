@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { buildContactEmailHtml, buildContactEmailText } from "@/app/lib/email-template";
+import { validateContact } from "@/app/lib/contact-validation";
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const TO_ADDRESS = process.env.CONTACT_TO_ADDRESS || "info@accuracap.com";
 const FROM_ADDRESS = process.env.RESEND_FROM_ADDRESS || "AccuraCap <onboarding@resend.dev>";
 
@@ -80,23 +80,13 @@ export async function POST(request: Request) {
   const subject = body.subject?.trim() ?? "";
   const message = body.message?.trim() ?? "";
 
-  if (!name || !email || !phone || !subject || !message) {
+  // Server-side validation — the source of truth. Mirrors the client rules so
+  // a tampered or scripted request is rejected with the same field-level errors.
+  const fieldErrors = validateContact({ name, email, phone, subject, message });
+  if (Object.keys(fieldErrors).length > 0) {
+    const firstError = Object.values(fieldErrors)[0];
     return Response.json(
-      { ok: false, error: "All fields are required." },
-      { status: 400 }
-    );
-  }
-
-  if (!EMAIL_REGEX.test(email)) {
-    return Response.json(
-      { ok: false, error: "Please enter a valid email address." },
-      { status: 400 }
-    );
-  }
-
-  if (message.length > 5000) {
-    return Response.json(
-      { ok: false, error: "Message is too long (max 5,000 characters)." },
+      { ok: false, error: firstError, fieldErrors },
       { status: 400 }
     );
   }
