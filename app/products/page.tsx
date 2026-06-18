@@ -5,6 +5,9 @@ import {
   PRODUCTS_AIF_DISCLAIMER_QUERY,
 } from "@/sanity/lib/queries";
 
+// ISR: re-render from Sanity at most once every 60s so CMS edits appear live.
+export const revalidate = 60;
+
 type ProductField = {
   label: string;
   value: string;

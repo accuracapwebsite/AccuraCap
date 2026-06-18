@@ -4,6 +4,9 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { LEADERSHIP_QUERY, TEAM_MEMBERS_QUERY } from "@/sanity/lib/queries";
 
+// ISR: re-render from Sanity at most once every 60s so CMS edits appear live.
+export const revalidate = 60;
+
 type Member = {
   _id: string;
   name: string;

@@ -2,6 +2,10 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { PMS_DOCUMENTS_QUERY } from "@/sanity/lib/queries";
 
+// ISR: re-render this page from Sanity at most once every 60s so CMS
+// edits (e.g. updated PDFs) appear on the live site without a redeploy.
+export const revalidate = 60;
+
 type PmsDocument = {
   _id: string;
   title: string;

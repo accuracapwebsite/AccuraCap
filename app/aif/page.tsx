@@ -1,6 +1,9 @@
 import { client } from "@/sanity/lib/client";
 import { AIF_DOCUMENTS_QUERY } from "@/sanity/lib/queries";
 
+// ISR: re-render from Sanity at most once every 60s so CMS edits appear live.
+export const revalidate = 60;
+
 type AifDocument = {
   _id: string;
   title: string;

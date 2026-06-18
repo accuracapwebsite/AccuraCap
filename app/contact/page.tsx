@@ -2,6 +2,9 @@ import { client } from "@/sanity/lib/client";
 import { REGISTERED_OFFICE_QUERY } from "@/sanity/lib/queries";
 import ContactForm from "./ContactForm";
 
+// ISR: re-render from Sanity at most once every 60s so CMS edits appear live.
+export const revalidate = 60;
+
 type RegisteredOffice = {
   _id: string;
   heading: string;
