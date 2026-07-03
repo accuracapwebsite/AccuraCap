@@ -28,7 +28,7 @@ export default async function Hero() {
   return (
     <section className="relative w-full min-h-[680px] md:min-h-[760px] lg:min-h-screen flex items-center overflow-hidden pt-9 md:pt-12 lg:pt-20 pb-7 md:pb-9 lg:pb-10">
       {/* Background Image */}
-      <Image src="/hero-bg-new.png" alt="Decorative background showing AccuraCap brand environment" fill priority className="object-cover" />
+      <Image src="/hero-bg-new.png" alt="" fill priority className="object-cover" />
 
       {/* Left-to-right overlay: fully solid light grey on the left, slow fade to transparent on the right */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#d8d8d8] from-30% to-transparent" />

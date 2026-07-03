@@ -136,7 +136,7 @@ export default function ContactForm() {
   const isSubmitting = status === "submitting";
 
   const inputClass = (hasError: boolean) =>
-    `w-full mt-1.5 px-4 py-2.5 bg-surface border text-[15.5px] text-black placeholder:text-black/65 focus:outline-none transition-colors disabled:opacity-60 ${
+    `w-full mt-1.5 px-4 py-2.5 bg-surface border text-[15.5px] text-black placeholder:text-[#595959] focus:outline-none transition-colors disabled:opacity-60 ${
       hasError ? "border-accent focus:border-accent" : "border-black/55 focus:border-black"
     }`;
 

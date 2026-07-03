@@ -34,7 +34,7 @@ function MemberCard({ member }: { member: Member }) {
         {member.image ? (
           <Image
             src={urlFor(member.image).width(320).height(320).url()}
-            alt={`Portrait photo of ${member.name}${member.role ? `, ${member.role}` : ""}`}
+            alt=""
             fill
             sizes="128px"
             className="object-cover object-top"

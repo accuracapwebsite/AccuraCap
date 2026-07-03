@@ -65,7 +65,7 @@ export default function PhilosophyPage() {
               <div className="group relative mt-7 w-full flex-1 min-h-[300px] overflow-hidden rounded-2xl cursor-pointer shadow-[0_1px_2px_rgba(17,24,39,0.04),0_16px_40px_-20px_rgba(17,24,39,0.22)]">
                 <Image
                   src="/Disciplined investing photo.png"
-                  alt="Illustration representing AccuraCap's disciplined, data-driven investment philosophy"
+                  alt=""
                   fill
                   sizes="(min-width: 1024px) 56vw, 100vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
@@ -168,7 +168,7 @@ underperformers with minimal manual intervention.
               <div className="group relative w-full aspect-[16/10] md:aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-[0_1px_2px_rgba(17,24,39,0.04),0_16px_40px_-20px_rgba(17,24,39,0.22)]">
                 <Image
                   src="/Philosophy page.png"
-                  alt="Visual representation of AccuraCap's core ranking-algorithm investment strategy"
+                  alt=""
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
