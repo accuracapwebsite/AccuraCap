@@ -2,7 +2,7 @@
 
 export default function KYCPage() {
   return (
-    <main className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
+    <div className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
       <div className="max-w-[1280px] mx-auto">
 
         <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
@@ -22,9 +22,9 @@ export default function KYCPage() {
 
           {/* Section 1 */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               What is the change from <span className="text-[18px]">1</span><sup>st</sup> April 2024?
-            </h3>
+            </h2>
 
             <p>
               SEBI vide circular SEBI/HO/MIRSD/FATF/P/CIR/2023/0144 dated 11th August 2023,
@@ -48,9 +48,9 @@ export default function KYCPage() {
 
           {/* Section 2 */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               What are the attributes affecting your KYC status?
-            </h3>
+            </h2>
 
             <p>
               The KRAs have changed the KYC status of all existing KYC complied investors after validating
@@ -69,9 +69,9 @@ export default function KYCPage() {
 
           {/* Table */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               What are the implications?
-            </h3>
+            </h2>
 
             <div className="overflow-x-auto">
               <table className="w-full min-w-[600px] text-[15px] md:text-[15.5px]">
@@ -113,9 +113,9 @@ export default function KYCPage() {
 
           {/* Section 3 */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               How can investors check their KYC status?
-            </h3>
+            </h2>
 
             <ul className="list-disc pl-6 space-y-1">
               <li>Visit your KRA website (links below)</li>
@@ -129,9 +129,9 @@ export default function KYCPage() {
 
           {/* Links */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               KYC Contact Details Validation Links
-            </h3>
+            </h2>
 
             <ul className="space-y-2 text-[15.5px] md:text-[16px]">
               {[
@@ -153,9 +153,9 @@ export default function KYCPage() {
 
           {/* PAN Aadhaar Links */}
           <section className="space-y-3">
-            <h3 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
+            <h2 className="font-semibold text-black uppercase text-[13px] tracking-[0.2em]">
               KYC PAN Aadhaar Validation Links
-            </h3>
+            </h2>
 
             <ul className="space-y-2 text-[15.5px] md:text-[16px]">
               {[
@@ -176,6 +176,6 @@ export default function KYCPage() {
 
         </div>
       </div>
-    </main>
+    </div>
   );
 }

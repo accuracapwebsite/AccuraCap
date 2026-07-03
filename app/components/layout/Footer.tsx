@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" aria-label="AccuraCap home">
               <Image
                 src="/Accuracap-logo.png"
-                alt="AccuraCap company logo"
+                alt=""
                 width={140}
                 height={52}
                 className="object-contain w-[110px] md:w-[110px] lg:w-[120px] h-auto"

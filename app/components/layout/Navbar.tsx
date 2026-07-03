@@ -74,7 +74,7 @@ export default function Navbar() {
         <Link href="/" className="shrink-0" aria-label="AccuraCap home">
           <Image
             src="/Accuracap-logo.png"
-            alt="AccuraCap company logo"
+            alt=""
             width={220}
             height={116}
             priority

@@ -15,7 +15,7 @@ export default async function AIFPage() {
   const documents = await client.fetch<AifDocument[]>(AIF_DOCUMENTS_QUERY);
 
   return (
-    <main className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
+    <div className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
       <div className="max-w-[1280px] mx-auto">
 
         <h1 className="text-[32.5px] sm:text-[37.5px] md:text-[44.5px] lg:text-[49px] text-black leading-[1.18] tracking-tight">
@@ -60,6 +60,6 @@ export default async function AIFPage() {
         )}
 
       </div>
-    </main>
+    </div>
   );
 }

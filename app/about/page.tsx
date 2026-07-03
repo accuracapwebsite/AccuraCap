@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
+    <div className="w-full bg-white pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16">
       <div className="max-w-[1280px] mx-auto">
 
         {/* Header */}
@@ -31,6 +31,6 @@ export default function About() {
         </div>
 
       </div>
-    </main>
+    </div>
   );
 }

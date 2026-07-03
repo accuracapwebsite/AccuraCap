@@ -37,7 +37,7 @@ const steps = [
 
 export default function PhilosophyPage() {
   return (
-    <main className="w-full bg-white">
+    <div className="w-full bg-white">
 
       {/* ═══ Hero: Philosophy + Guiding Principles side-by-side ═══ */}
       <section className="relative pt-9 md:pt-12 pb-9 md:pb-12 px-6 md:px-10 lg:px-16 bg-gradient-to-b from-surface/40 to-white">
@@ -106,9 +106,9 @@ export default function PhilosophyPage() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div className="min-w-0">
-                        <h3 className="text-[18px] md:text-[19.5px] font-semibold text-black leading-snug tracking-tight">
+                        <h2 className="text-[18px] md:text-[19.5px] font-semibold text-black leading-snug tracking-tight">
                           {item.title}
-                        </h3>
+                        </h2>
                         <div className="mt-3 flex items-center gap-2">
                           <span className="block h-[2px] w-7 bg-accent rounded-full" />
                           <span className="block h-[2px] w-1.5 bg-accent/40 rounded-full" />
@@ -228,6 +228,6 @@ underperformers with minimal manual intervention.
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

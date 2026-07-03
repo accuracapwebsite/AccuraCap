@@ -34,7 +34,7 @@ export default async function ProductsPage() {
   ]);
 
   return (
-    <main className="w-full bg-white">
+    <div className="w-full bg-white">
 
       {/* ═══ PMS Section ═══ */}
       <section id="pms" className="pt-9 md:pt-12 pb-8 md:pb-10 px-6 md:px-10 lg:px-16">
@@ -53,7 +53,7 @@ export default async function ProductsPage() {
               >
                 {/* Card Header */}
                 <div className="flex items-center gap-4 px-6 md:px-8 py-5 border-b border-border bg-surface border-l-4 border-l-accent">
-                  <h3 className="text-[23px] md:text-[28px] font-normal text-black tracking-tight">{product.name}</h3>
+                  <h2 className="text-[23px] md:text-[28px] font-normal text-black tracking-tight">{product.name}</h2>
                 </div>
 
                 {/* Card Body */}
@@ -92,7 +92,7 @@ export default async function ProductsPage() {
               >
                 {/* Card Header */}
                 <div className="flex items-center gap-4 px-6 md:px-8 py-5 border-b border-border bg-surface border-l-4 border-l-accent">
-                  <h3 className="text-[23px] md:text-[28px] font-normal text-black tracking-tight">{product.name}</h3>
+                  <h2 className="text-[23px] md:text-[28px] font-normal text-black tracking-tight">{product.name}</h2>
                 </div>
 
                 {/* Card Body */}
@@ -120,6 +120,6 @@ export default async function ProductsPage() {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }
