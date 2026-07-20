@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
@@ -25,6 +26,14 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" tabIndex={-1} className="flex-1 pt-[84px] md:pt-[92px] lg:pt-[100px]">{children}</main>
         <Footer />
+
+        {/* ── EnableUser accessibility widget ──
+            Config must be set before the widget script loads. The primary
+            color tracks --color-accent in globals.css. */}
+        <Script id="enablestack-config" strategy="beforeInteractive">
+          {`window.ENABLESTACK_CONFIG = { colors: { primary: '#B22234' } };`}
+        </Script>
+        <Script src="/enablestack-widget.js" strategy="afterInteractive" />
       </body>
     </html>
   );
