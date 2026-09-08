@@ -65,6 +65,7 @@ export default function Footer() {
           <div className="flex gap-5 text-[13.5px] md:text-[14px] text-black/65">
             <Link href="/grievance" className="hover:text-black transition-colors">Grievance</Link>
             <Link href="/kyc_status_check" className="hover:text-black transition-colors">KYC Status Check</Link>
+            <Link href="/accessibility-statement" className="hover:text-black transition-colors">Accessibility Statement</Link>
           </div>
         </div>
 
