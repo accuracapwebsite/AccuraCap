@@ -16,7 +16,7 @@ export default function AccessibilityStatementPage() {
           {/* Commitment */}
           <section className="space-y-3.5">
             <p>
-              At AccuraCap, we are committed to providing an accessible, inclusive, and user-friendly digital
+              At <strong className="font-semibold text-black">AccuraCap</strong>, we are committed to providing an accessible, inclusive, and user-friendly digital
               experience for all users, including persons with disabilities.
             </p>
 
@@ -24,8 +24,8 @@ export default function AccessibilityStatementPage() {
               We believe that every investor should be able to access information and use our digital services with
               independence and ease. As part of this commitment, we continuously work to improve the accessibility
               of our website and investor-facing content in accordance with applicable regulatory requirements and
-              recognised accessibility standards, including WCAG 2.1 or the latest applicable version, GIGW,
-              IS 17802, and the Rights of Persons with Disabilities Act, 2016.
+              recognised accessibility standards, including <strong className="font-semibold text-black">WCAG 2.1 or the latest applicable
+              version, GIGW, IS 17802, and the Rights of Persons with Disabilities Act, 2016</strong>.
             </p>
           </section>
 
@@ -36,15 +36,16 @@ export default function AccessibilityStatementPage() {
             </h2>
 
             <p>
-              To support our digital accessibility programme, AccuraCap has partnered with an IAAP-certified
-              digital accessibility services provider, to assess and improve the accessibility of our website and
+              To support our digital accessibility programme, <strong className="font-semibold text-black">AccuraCap has partnered with an
+              IAAP-certified digital accessibility services provider</strong>, to assess and improve the accessibility of our website and
               support our ongoing accessibility compliance initiatives.
             </p>
 
             <p>
               As part of this engagement, our website has undergone a comprehensive accessibility assessment
               involving automated testing, manual testing, keyboard navigation, and assistive technology testing.
-              The assessment was conducted by an IAAP-certified accessibility professional.
+              The assessment was conducted by an <strong className="font-semibold text-black">IAAP-certified accessibility
+              professional</strong>.
             </p>
 
             <p>
@@ -72,26 +73,27 @@ export default function AccessibilityStatementPage() {
 
             <p>
               If you experience difficulty accessing any information, content, or functionality on our website, or
-              require information in an accessible format, please contact our Accessibility Nodal Officer:
+              require information in an accessible format, please contact our <strong className="font-semibold text-black">Accessibility Nodal
+              Officer</strong>:
             </p>
 
             {/* Contact Box */}
             <div className="border border-border p-4 md:p-5 space-y-1.5 bg-surface/40">
               <p>
-                <span className="font-medium text-black">Accessibility Nodal Officer:</span>{" "}
+                <span className="font-semibold text-black">Accessibility Nodal Officer:</span>{" "}
                 Ishu Singhania
               </p>
               <p>
-                <span className="font-medium text-black">Email:</span>{" "}
+                <span className="font-semibold text-black">Email:</span>{" "}
                 <a
-                  href="mailto:griviences@accuracap.com"
+                  href="mailto:grievances@accuracap.com"
                   className="text-accent underline hover:text-accent-dark transition-colors"
                 >
-                  griviences@accuracap.com
+                  grievances@accuracap.com
                 </a>
               </p>
               <p>
-                <span className="font-medium text-black">Phone:</span>{" "}
+                <span className="font-semibold text-black">Phone:</span>{" "}
                 <a
                   href="tel:+919821653556"
                   className="text-accent underline hover:text-accent-dark transition-colors"
@@ -100,6 +102,11 @@ export default function AccessibilityStatementPage() {
                 </a>
               </p>
             </div>
+
+            <p>
+              We will make reasonable efforts to understand and address accessibility-related concerns and
+              provide appropriate assistance wherever required.
+            </p>
           </section>
 
         </div>

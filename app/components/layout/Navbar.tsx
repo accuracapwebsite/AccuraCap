@@ -38,6 +38,7 @@ const menu: MenuItem[] = [
       { name: "KYC Status Check", href: "/kyc_status_check" },
       { name: "Grievance", href: "/grievance" },
       { name: "FAQ's", href: "/faq" },
+      { name: "Accessibility Statement", href: "/accessibility-statement" },
     ],
   },
   {
